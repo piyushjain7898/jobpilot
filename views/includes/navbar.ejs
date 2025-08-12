@@ -1,0 +1,86 @@
+<!-- Navbar -->
+<nav class="navbar bg-white shadow-sm py-3">
+  <div class="container-fluid align-items-center">
+    <!-- Left: Brand -->
+    <a class="navbar-brand d-flex align-items-center mainNavBar" href="/company">
+      <i class="fa-solid fa-briefcase" style="color: #2563eb; font-size: 20px;"></i>
+      <span class="ms-2 fw-bold">Jobpilot</span>
+    </a>
+
+    <!-- Center: Nav links -->
+    <ul class="nav nav-pills justify-content-center flex-grow-1" id="setupNav">
+      <li class="nav-item">
+        <a class="nav-link active" href="/company" data-step="1">
+          <i class="fa-regular fa-user"></i> Company Info
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/founding" data-step="2">
+          <i class="fa-regular fa-circle-user"></i> Founding Info
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/socials" data-step="3">
+          <i class="fa-solid fa-globe"></i> Social Media Profile
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/contact" data-step="4">
+          <i class="fa-regular fa-address-book"></i> Contact
+        </a>
+      </li>
+    </ul>
+
+    <!-- Right: Progress bar -->
+    <div style="width: 150px;">
+      <small class="text-muted d-block mb-1">Setup Progress</small>
+      <div class="progress" style="height: 4px;">
+        <div class="progress-bar bg-primary" id="progressBar" style="width: 25%;"></div>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Custom CSS -->
+<style>
+.nav-pills .nav-link {
+  color: #6b7280;
+  border-radius: 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid transparent;
+}
+.nav-pills .nav-link.active {
+  color: #2563eb;
+  background-color: transparent;
+  border-bottom: 2px solid #2563eb;
+}
+.nav-pills .nav-link:hover {
+  color: #2563eb;
+}
+</style>
+
+<!-- JavaScript for dynamic progress -->
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const links = document.querySelectorAll('#setupNav .nav-link');
+  const currentPath = window.location.pathname;
+
+  let activeStep = 1; // default step
+
+  links.forEach(link => {
+    // Remove any existing active classes
+    link.classList.remove('active');
+
+    // If link matches current page, mark it as active
+    if (link.getAttribute('href') === currentPath) {
+      link.classList.add('active');
+      activeStep = parseInt(link.getAttribute('data-step'));
+    }
+  });
+
+  // Update progress bar based on active link
+  const totalSteps = links.length;
+  const progress = (activeStep / totalSteps) * 100;
+  document.getElementById('progressBar').style.width = progress + '%';
+});
+</script>

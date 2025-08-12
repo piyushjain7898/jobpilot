@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobpilot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+    <form action="/login" method="post">
+        <div class="container min-vh-100 d-flex align-items-center justify-content-center">
+            <div class="row login-container w-100">
+                <!-- Left side image -->
+                <div class="col-md-6 p-0">
+                    <div class="img-placeholder">IMG Placeholder</div>
+                </div>
+
+                <!-- Right side form -->
+                <div class="col-md-6 p-4 p-md-5">
+                    <h4 class="fw-bold mb-4 text-center">Login as a Company</h4>
+
+                    <!-- Email -->
+                    <div class="mb-3">
+                        <label class="form-label">Email ID</label>
+                        <input type="email" name="orgEmail" class="form-control" placeholder="Enter email" required>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="mb-3">
+                        <label class="form-label">Enter your password</label>
+                        <input type="password" name="password" class="form-control" placeholder="Password" required>
+                        <small>
+                            <a href="#" class="text-warning text-decoration-none">🔑 Forgot Password?</a>
+                        </small>
+                    </div>
+
+                    <!-- Login Button -->
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn login-btn">Login</button>
+                    </div>
+
+                    <!-- Sign up link -->
+                    <p class="text-center mb-0">
+                        Don’t have an account?
+                        <a href="/register" class="text-primary text-decoration-none">Sign up</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+
+</body>
+
+</html>

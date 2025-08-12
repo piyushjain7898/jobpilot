@@ -1,0 +1,72 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+    <div class="container mt-4">
+        <form action="/socials" method="POST" class="col-7 offset-2">
+
+            <h4 class="mb-4">Socials</h4>
+
+            <!-- Social Link 1 -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-white">
+                    <i class="bi bi-facebook text-primary"></i>
+                </span>
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">Facebook</button>
+                <input type="text" class="form-control" name="facebook" placeholder="Profile link/url..." required>
+                <button class="btn btn-outline-danger" type="button">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <!-- Social Link 2 -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-white">
+                    <i class="bi bi-twitter text-info"></i>
+                </span>
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">Twitter</button>
+                <input type="text" class="form-control" name="twitter" placeholder="Profile link/url..." required>
+                <button class="btn btn-outline-danger" type="button">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <!-- Social Link 3 -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-white">
+                    <i class="bi bi-instagram text-danger"></i>
+                </span>
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">Instagram</button>
+                <input type="text" class="form-control" name="instagram" placeholder="Profile link/url..." required>
+                <button class="btn btn-outline-danger" type="button">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <!-- Social Link 4 -->
+            <div class="input-group mb-3">
+                <span class="input-group-text bg-white">
+                    <i class="bi bi-youtube text-danger"></i>
+                </span>
+                <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">YouTube</button>
+                <input type="text" class="form-control" name="youtube" placeholder="Profile link/url..." required>
+                <button class="btn btn-outline-danger" type="button">
+                    <i class="bi bi-x"></i>
+                </button>
+            </div>
+
+            <!-- Bottom Buttons -->
+            <div class="d-flex justify-content-left mt-5">
+                <a href="/founding" class="btn btn-secondary mt-3">Previous</a> &nbsp; &nbsp;
+                <button type="submit" class="btn btn-primary mt-3">Save & Next</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- Bootstrap Icons CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+</body>

@@ -1,0 +1,66 @@
+<% layout("layouts/boilerplate") %>
+
+<body>
+  <div class="row">
+    <form action="/founding" method="POST" class="col-8 mt-4 offset-2">
+
+      <!-- First row: Organization, Industry, Team Size -->
+      <div class="row mb-3">
+        <div class="col-md-4">
+          <label class="form-label">Organization Type</label>
+          <select class="form-select" name="organization_type" required>
+            <option value="">Choose...</option>
+            <option value="One">One</option>
+            <option value="Two">Two</option>
+            <option value="Three">Three</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Industry Type</label>
+          <select class="form-select" name="industry_type" required>
+            <option value="">Choose...</option>
+            <option value="One">One</option>
+            <option value="Two">Two</option>
+            <option value="Three">Three</option>
+          </select>
+        </div>
+
+        <div class="col-md-4">
+          <label class="form-label">Team Size</label>
+          <select class="form-select" name="team_size" required>
+            <option value="">Choose...</option>
+            <option value="1-10">1-10</option>
+            <option value="11-50">11-50</option>
+            <option value="51+">51+</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Second row: Year & Website -->
+      <div class="row mb-3">
+        <div class="col-md-6">
+          <label class="form-label">Year of Establishment</label>
+          <input type="date" class="form-control" name="year_established" required>
+        </div>
+        <div class="col-md-6">
+          <label class="form-label">Company Website</label>
+          <input type="url" placeholder="Website URL..." class="form-control" name="company_website" required>
+        </div>
+      </div>
+
+      <!-- Company Vision -->
+      <div class="mb-3">
+        <label class="form-label">Company Vision</label>
+        <textarea class="form-control" name="company_vision" placeholder="Tell us about your company vision..." rows="4" required></textarea>
+      </div>
+
+      <!-- Buttons -->
+      <div class="d-flex justify-content-left">
+        <a href="/company" class="btn btn-secondary">Previous</a> &nbsp;
+        <button type="submit" class="btn btn-primary">Save & Next</button>
+      </div>
+
+    </form>
+  </div>
+</body>

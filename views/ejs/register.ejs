@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> jobpilot</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container min-vh-100 d-flex align-items-center mt-5 justify-content-center">
+        <div class="row register-container w-100">
+            <!-- Left Side Image -->
+            <div class="col-md-6 p-0">
+                <div class="img-placeholder">IMG Placeholder</div>
+            </div>
+
+            <!-- Right Side Form -->
+            <div class="col-md-6 p-4 p-md-5">
+                <h4 class="fw-bold mb-4 text-center">Register as a Company</h4>
+
+                <form action="/register" method="POST">
+                    <!-- Full Name -->
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" name="fullName" class="form-control" placeholder="Enter Your Full Name"
+                            required>
+                    </div>
+
+                    <!-- Mobile Number -->
+                    <div class="mb-3">
+                        <label class="form-label">Mobile No</label>
+                        <div class="input-group">
+                            <span class="input-group-text">🇮🇳 +91</span>
+                            <input type="tel" name="mobile" class="form-control" placeholder="Enter Mobile Number"
+                                required>
+                        </div>
+                    </div>
+
+                    <!-- Organization Email -->
+                    <div class="mb-3">
+                        <label class="form-label">Organization Email</label>
+                        <input type="email" name="orgEmail" class="form-control" placeholder="Official Email" required>
+                    </div>
+
+                    <!-- Gender -->
+                    <div class="mb-3">
+                        <label class="form-label">Gender</label>
+                        <div class="d-flex gap-2">
+                            <input type="radio" class="btn-check" name="gender" id="male" value="Male" required>
+                            <label class="btn gender-btn" for="male">Male</label>
+
+                            <input type="radio" class="btn-check" name="gender" id="female" value="Female" required>
+                            <label class="btn gender-btn" for="female">Female</label>
+
+                            <input type="radio" class="btn-check" name="gender" id="other" value="Other" required>
+                            <label class="btn gender-btn" for="other">Other</label>
+                        </div>
+                    </div>
+
+                    <!-- Password -->
+                    <div class="row mb-3">
+                        <div class="col">
+                            <label class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" placeholder="Password" required>
+                        </div>
+                      
+                    </div>
+
+                    <!-- Privacy Policy -->
+                    <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" name="terms" required>
+                        <label class="form-check-label">
+                            All your information is collected, stored, and processed as per our data processing
+                            guidelines.
+                            By signing up, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of
+                                use</a>.
+                        </label>
+                    </div>
+
+                    <!-- Submit -->
+                    <div class="d-grid mb-3">
+                        <button type="submit" class="btn register-btn">Register</button>
+                    </div>
+
+                    <!-- Login link -->
+                    <p class="text-center mb-0">
+                        Already have an account?
+                        <a href="/login" class="text-primary text-decoration-none">Login</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
